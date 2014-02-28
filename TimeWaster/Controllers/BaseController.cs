@@ -5,9 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using TimeWastedByEktron.Web.Models;
+using TimeWaster.Models;
 
-namespace TimeWastedByEktron.Web.Controllers
+namespace TimeWaster.Controllers
 {
     public abstract class BaseController : Controller
     {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
-using TimeWastedByEktron.Web.Models;
+using TimeWaster.Models;
 
-namespace TimeWastedByEktron.Web
+namespace TimeWaster
 {
     public static class Extensions
     {

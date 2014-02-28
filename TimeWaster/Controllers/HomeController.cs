@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TimeWastedByEktron.Web.ViewModels;
+using TimeWaster.ViewModels;
 
-namespace TimeWastedByEktron.Web.Controllers
+namespace TimeWaster.Controllers
 {
     public class HomeController : BaseController
     {

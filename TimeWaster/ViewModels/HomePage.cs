@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using TimeWastedByEktron.Web.Models;
+using TimeWaster.Models;
 
-namespace TimeWastedByEktron.Web.ViewModels
+namespace TimeWaster.ViewModels
 {
     public class HomePage
     {

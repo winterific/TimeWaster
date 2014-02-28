@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using TimeWastedByEktron.Web.Models;
-using TimeWastedByEktron.Web.ViewModels;
+using TimeWaster.Models;
+using TimeWaster.ViewModels;
 
-namespace TimeWastedByEktron.Web.Controllers
+namespace TimeWaster.Controllers
 {
     public class UserController : BaseController
     {

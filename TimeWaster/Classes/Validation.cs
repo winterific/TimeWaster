@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace TimeWastedByEktron.Web.Classes
+namespace TimeWaster
 {
     public static class Validation
     {

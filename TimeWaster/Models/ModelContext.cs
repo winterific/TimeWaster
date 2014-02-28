@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace TimeWastedByEktron.Web.Models
+namespace TimeWaster.Models
 {
     public class ModelContext : DbContext
     {
