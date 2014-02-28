@@ -1,4 +1,4 @@
-﻿@using TimeWaster.Web.Models
+﻿@using TimeWaster.Models
 @{
     Layout = null;
     var currentUser = ViewBag.CurrentUser as User;
@@ -7,8 +7,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width;">
-    <title>Time Waste Tracker</title>
+    <meta name="viewport" content="width=device-width;user-scalable=no;">
+    <title>Wasted Time Tracker</title>
   
     <link rel="stylesheet" href="/Content/styles/stylesheets/screen.css">
 </head>
@@ -19,11 +19,11 @@
             @Html.Partial("_Nav")
         </nav>
     
-        @if (User.Identity.IsAuthenticated)
+        @if (currentUser != null)
         {
             <div class="messages">
                 <p>
-                    @User.Identity.Name
+                    @currentUser.UserName
                 </p>
             </div>
         }
@@ -33,7 +33,10 @@
         @RenderBody()
     </div>
     
-    <script src="/Scripts/jquery-2.0.3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        typeof (jQuery) === 'undefined' && document.write("<script src='/Scripts/jquery-2.1.0.min.js'></" + "script>");
+    </script>
     @RenderSection("bottomScripts", false)
 
 </body>

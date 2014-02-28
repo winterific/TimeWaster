@@ -9,7 +9,11 @@ namespace TimeWaster.Models
     public class ModelContext : DbContext
     {
         public ModelContext()
-            : base("default")
+            : this("default")
+        {
+        }
+        public ModelContext(string name)
+            : base(name)
         {
         }
 

@@ -25,5 +25,9 @@ namespace TimeWaster.Controllers
             }
         }
 
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewBag.CurrentUser = CurrentUser;
+        }
     }
 }
