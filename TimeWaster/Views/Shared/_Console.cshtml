@@ -1,0 +1,15 @@
+﻿@using TimeWastedByEktron.Web
+@model TimeWastedByEktron.Web.ViewModels.InfoConsole
+
+<h4>Previous Sessions</h4>
+@foreach (var session in Model.PreviousSessions)
+{
+    <p>
+        <span>@session.SessionDate.ToShortDateString()</span> - <span class="duration">@session.Duration.StandardFormat()</span>
+    </p>
+}
+
+<p>
+    <b>Grand Total:</b> 
+    <span class="grand-total">@Model.GrandTotal.StandardFormat()</span>
+</p>

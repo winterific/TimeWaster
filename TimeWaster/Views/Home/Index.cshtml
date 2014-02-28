@@ -1,0 +1,44 @@
+﻿@using TimeWastedByEktron.Web
+@model TimeWastedByEktron.Web.ViewModels.HomePage
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="timer">
+    <h1 id="total" class="total">@Model.CurrentDuration.StandardFormat()</h1>
+
+    <a id="startStop" href="#" class="button medium radius">Start</a>
+    <a id="reset" href="#" class="button medium radius disabled">Reset</a>
+            
+    <p class="note hide-for-medium-down">
+        Note: Pressing the spacebar will also activate and deactivate the timer.
+    </p>
+    
+    @if (Model.InfoConsole != null)
+    {
+        @Html.Partial("_Console", Model.InfoConsole)
+    }
+    
+</div>
+
+<div class="content">
+    
+    <p id="intro">Measure the time wasted by waiting for an Ektron site to build, re-build, or do basically anything while you sit there and sweat.</p>
+    <p id="comment1" class="hide">Wow, thirty seconds already?</p>
+    <p id="comment2" class="hide"><b>Two minutes?</b>  My how time flies when you're having fun!</p>
+    <p id="comment3" class="hide"><b>Ten minutes</b> have been squandered.  How do you feel about that?</p>
+    <p id="comment4" class="hide">
+        <b>Thirty minutes...</b>  Here's a picture of a tea kettle that you can watch while you wait... 
+        <img src='/Content/img/kettle.jpg' alt='tea kettle'>
+    </p>
+    <p id="comment5" class="hide"><b>ONE WHOLE HOUR</b> has gone by repeatedly waiting for the site to load.  
+        Perhaps it's time for a change in CMS?  :) 
+        <img src='/Content/img/page-under-construction.jpg' alt='ektron login guy'>
+    </p>
+
+</div>
+
+@section bottomScripts
+{
+    <script src="/Scripts/wasted.js"></script>
+}

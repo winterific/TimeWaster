@@ -1,0 +1,54 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "susy";
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+$container-style: magic; // static, fluid, magic
+
+$show-grid-backgrounds  : false;
+
+// $container-width: 1140px; // defaults to 960
+
+/*-- Font Size --*/
+
+$base-font-size: 16px;
+$base-line-height: 18px;
+
+/*-- SUSY grid size --*/
+
+// $breakpoint: 40em;
+// $main-max-width: 100%;
+// $column-width: 3em;
+
+/*-- Media Queries --*/
+
+@function pxtoem($px, $base: $base-font-size){
+    @return ($px / $base) + 0em;
+}
+
+$iphone-portrait: pxtoem(320px);
+$iphone-landscape: pxtoem(645px);
+
+$ipad-portrait: pxtoem(767px);
+$ipad-landscape: pxtoem(1000px);
+$twelve-hundred: pxtoem(1200px);
+
+@mixin clear {
+    &:before, &:after{
+        content: " ";
+        display: table;
+    }
+
+    &:after{
+        clear: both;
+    }
+
+    *zoom: 1;
+}

@@ -1,0 +1,42 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+.hide {
+    display: none;
+}
+
+.container {
+    @include container;
+    @include susy-grid-background;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Colors */
+$gray: #333;
+$lightGray: #efefef;
+
+body {
+    color: $gray;
+    background-color: white;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+
+}
+
+nav {
+    @include span-columns(6, 12);
+}
+.messages {
+    @include span-columns(6, 12);
+}
+.timer {
+    @include span-columns(3, 12);
+}
+.content {
+    @include span-columns(9, 12);
+}

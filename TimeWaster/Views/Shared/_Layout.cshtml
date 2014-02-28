@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width;">
+    <title>Time Wasted by Ektron Loading</title>
+  
+    <link rel="stylesheet" href="/Content/styles/stylesheets/screen.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            @Html.Partial("_Nav")
+        </nav>
+    
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="messages">
+                <p>
+                    @User.Identity.Name
+                </p>
+            </div>
+        }
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    
+    <script src="/Scripts/jquery-2.0.3.min.js"></script>
+    @RenderSection("bottomScripts", false)
+
+</body>
+</html>
